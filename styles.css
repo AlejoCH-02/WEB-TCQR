@@ -4,11 +4,35 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     font-family: 'Outfit', sans-serif;
+
+}
+
+.home-progressive-blur {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    pointer-events: none;
+    z-index: 999;
+    --pblur-scale: 1;
+}
+
+.home-progressive-blur__layer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
 
 /* NAVBAR */
@@ -172,34 +196,108 @@ body {
 .about {
     background-color: #212322;
     width: 100%;
-    padding: 80px 20px;
+    padding: 0;
+    margin: 0;
 }
 
-.about-content {
+.about-box {
+    background-color: #1D1F1E;
+    width: 100%;
+    min-height: 640px;
+    padding: 155px 18%;
+}
+
+.mision-vision {
     color: #F2F1EF;
-    width: 90%;
-    max-width: 1100px;
-    margin: 60px auto;
+    width: 100%;
+    padding: 155px 18%;
 }
 
-.about-content h2 {
+.about-box h2 {
     font-size: clamp(45px, 3.5vw, 50px);
     font-weight: 700;
-    margin-bottom: 17px;
+    margin-bottom: 90px;
     line-height: 1.2;
     color: #d1d5db;
 }
 
-.about-content p {
+.about-box p {
+    font-size: clamp(35px, 1.2vw, 40px);
+    font-weight: 500;
+    line-height: 1.6;
+    color: #d1d5db;
+}
+
+.mision-vision p {
     font-size: clamp(25px, 1.2vw, 30px);
     font-weight: 500;
     line-height: 1.6;
     color: #d1d5db;
 }
 
-.about-content .frase {
+.mision-vision .frase {
     font-size: clamp(28px, 3vw, 42px);
     font-weight: 700;
     color: #EE751B;
+    margin-top: 0;
 }
 
+.mision {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(30px, 5vw, 60px);
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+.text-mision{
+    flex: 1;
+    text-align: left;
+    max-width: auto;
+}
+
+.img-mision {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 380px;
+}
+
+.img-mision img{
+    width: 100%;
+    max-width: 380px;        
+    height: auto;          
+    object-fit: cover;
+    display: block;
+}
+
+.vision {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(30px, 5vw, 60px);
+    width: 100%;
+}
+
+.text-vision {
+    flex: 1;
+    text-align: right;
+    max-width: auto;
+}
+
+
+.img-vision {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 380px;
+}
+
+.img-vision img{
+    width: 100%;
+    max-width: 380px;        
+    height: auto;          
+    object-fit: cover;
+    display: block;
+}
