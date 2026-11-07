@@ -50,6 +50,7 @@ body {
     display: flex;
     gap: clamp(15px, 3vw, 40px);
     flex: 1;
+    
 }
 
 .nav-izq {
@@ -82,11 +83,13 @@ body {
     padding: 8px 12px;
     white-space: nowrap;
     transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 8px;
 }
 
 .nav-lado a:hover {
     background-color: #4CC9E9;
     color: #212322;
+    
 }
 
 /* HERO SECTION */
@@ -164,7 +167,7 @@ body {
     font-size: clamp(16px, 1.2vw, 22px);
     font-weight: 700;
     text-decoration: none;
-    border-radius: 999px;
+    border-radius: 8px;
     transition: all 0.2s ease;
     display: inline-block;
     text-align: center;
@@ -300,4 +303,24 @@ body {
     height: auto;          
     object-fit: cover;
     display: block;
+}
+
+.productos{
+    background-color: #d1d5db;
+}
+
+.productos-title{
+    font-size: 60px;
+}
+
+.productos-sub{
+font-size: 30px;
+font-weight: 300;
+}
+
+.img-productos img{
+    width: 356px;
+    height: 476px;
+    border-radius: 8px;
+    
 }
