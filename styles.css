@@ -44,6 +44,12 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px clamp(15px, 3vw, 40px);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0   4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .nav-lado {
@@ -87,8 +93,9 @@ body {
 }
 
 .nav-lado a:hover {
-    background-color: #4CC9E9;
+    background-color: #F9E03D;
     color: #212322;
+    transition: 0.25s;
 
 }
 
@@ -96,7 +103,8 @@ body {
 .hero {
     position: relative;
     width: 100%;
-    min-height: calc(100vh - 90px);
+    min-height: 100vh;
+    padding-top: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,17 +190,19 @@ body {
 .btn-demo:hover {
     background-color: transparent;
     color: #EE751B;
+    transition: 0.25s;
 }
 
 .btn-cliente {
-    border: 3px solid #4CC9E9;
-    background-color: #4CC9E9;
+    border: 3px solid #F9E03D;
+    background-color: #F9E03D;
     color: #212322;
 }
 
 .btn-cliente:hover {
     background-color: transparent;
-    color: #4CC9E9;
+    color: #F9E03D;
+    transition: 0.25s;
 }
 
 /* ABOUT SECTION */
@@ -207,28 +217,37 @@ body {
     background-color: #1D1F1E;
     width: 100%;
     min-height: 640px;
-    padding: 155px 18%;
+    padding: 155px 108px;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: block;
 }
 
 .mision-vision {
     color: #F2F1EF;
     width: 100%;
-    padding: 155px 18%;
+    padding: 155px 108px;
+    box-sizing: border-box;
 }
 
 .about-box h2 {
-    font-size: clamp(45px, 3.5vw, 50px);
+    font-size: clamp(38px, 3.5vw, 50px);
     font-weight: 700;
-    margin-bottom: 90px;
+    margin-top: 0;
+    margin-bottom: 50px;
     line-height: 1.2;
     color: #d1d5db;
 }
 
 .about-box p {
-    font-size: clamp(35px, 1.2vw, 40px);
+    font-size: clamp(38px, 2vw, 40px);
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 1.55;
     color: #d1d5db;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    text-align: left;
 }
 
 .mision-vision p {
@@ -310,9 +329,9 @@ body {
     background-color: #d1d5db;
     width: 100%;
     margin: 0;
-    /* Reducimos el padding lateral al 5%-8% para darle espacio a las 4 columnas */
     padding: 100px clamp(20px, 6vw, 100px);
     color: #212322;
+    padding-bottom: 0;
 }
 
 .productos-title {
@@ -330,28 +349,21 @@ body {
     color: #4b5563;
 }
 
-/* DISTRIBUCIÓN HORIZONTAL EN 4 COLUMNAS */
 .img-productos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* Crea exactamente 4 columnas iguales */
-    gap: clamp(15px, 2vw, 24px);
-    /* Espacio entre cada tarjeta */
+    gap: clamp(95px, 2vw, 95px);
     width: 100%;
-    max-width: 1400px;
-    /* Ancho máximo para pantallas muy grandes */
+    max-width: 1705px;
     margin: 0 auto;
 }
 
-/* CADA TARJETA */
 .card-producto {
     position: relative;
     width: 100%;
-    /* Ocupa el 100% de su columna en la grilla */
     aspect-ratio: 3 / 4;
-    /* Mantiene la proporción vertical elegante automáticamente */
     min-height: 380px;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: inset 0 0 0 0px transparent;
     transition: box-shadow 0.25s ease, transform 0.25s ease;
@@ -374,13 +386,11 @@ body {
 
 
 }
-
 .card-producto:hover img {
 
     transform: scale(1.05);
 }
 
-/* TEXTO SUPERPUESTO DENTRO DE CADA TARJETA */
 .info-producto {
     position: absolute;
     inset: 0;
@@ -408,4 +418,144 @@ body {
     line-height: 1.4;
     color: #d1d5db;
     margin: 0;
+}
+
+.btn-products{
+    margin-top: 65px;
+    text-align: right;
+}
+
+.btn-products a{
+    font-weight: 500;
+    background-color: #EE751B;
+    text-decoration: none;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    color: #d1d5db;
+    padding: 15px;
+}
+
+.btn-products a:hover{
+    background-color: transparent;
+    border: 3px solid #EE751B;
+    color: #EE751B;
+    transition: 0.25s;
+
+}
+
+.clients{
+    background-color: #d1d5db;
+    width: 100%;
+    min-height: 640px;
+    padding: 172px 108px;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: block;
+    padding-top: 200px;
+    
+}
+
+.clients-text{
+    text-align: center;
+}
+
+.clients-title{
+    font-size: 60px;
+    margin-top: 2px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.clients-text p{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 100px;
+    
+}
+
+
+.clients-carrusel {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    height: 300px;
+    background-color: #DFDFDF;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Difuminado suave a los bordes izquierdo y derecho (adaptado a fondo blanco) */
+.clients-carrusel::before,
+.clients-carrusel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.clients-carrusel::before {
+    left: 0;
+    background: linear-gradient(to right, #DFDFDF, transparent);
+}
+
+.clients-carrusel::after {
+    right: 0;
+    background: linear-gradient(to left, #DFDFDF, transparent);
+}
+
+/* Pista que contiene ambos grupos y se desplaza infinitamente */
+.carrusel-track {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: max-content;
+    animation: scroll-infinito 25s linear infinite;
+}
+
+/* Si el usuario pasa el mouse encima, la animación se pausa */
+.carrusel-track:hover {
+    animation-play-state: paused;
+}
+
+/* Cada grupo de logos alineado en fila */
+.carrusel-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 60px;
+    padding-right: 60px; /* Mantiene la misma distancia entre el último logo y el primero del siguiente grupo */
+    height: 100%;
+}
+
+.carrusel-group img {
+    height: 150px; /* Puedes subir o bajar la altura de los logos según cómo luzcan en 504px */
+    width: auto;
+    object-fit: contain;
+    display: block;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.carrusel-group img:hover {
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+/* Animación: traslada exactamente la mitad del ancho total */
+@keyframes scroll-infinito {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
