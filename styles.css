@@ -35,6 +35,13 @@ body {
     pointer-events: none;
 }
 
+.qr-accent-line {
+  width: 45px;
+  height: 4px;
+  background-color: #EE751B;
+  margin: 0.75rem 0 1rem 0;
+}
+
 /* NAVBAR */
 .navbar {
     background-color: #212322;
@@ -367,7 +374,42 @@ body {
     overflow: hidden;
     box-shadow: inset 0 0 0 0px transparent;
     transition: box-shadow 0.25s ease, transform 0.25s ease;
+    border: 2px solid transparent;
+}
 
+/* Esquinas QR */
+.card-producto::before,
+.card-producto::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-color: #EE751B; /* Ajusta al tono exacto de tu naranja */
+    border-style: solid;
+    pointer-events: none;
+    z-index: 10;
+    transition: all 0.25s ease;
+}
+
+/* Esquina superior izquierda */
+.card-producto::before {
+    top: 10px;
+    left: 10px;
+    border-width: 4px 0 0 4px;
+}
+
+/* Esquina inferior derecha */
+.card-producto::after {
+    bottom: 10px;
+    right: 10px;
+    border-width: 0 4px 4px 0;
+}
+
+/* Efecto hover interactivo: se expanden ligeramente */
+.card-producto:hover::before,
+.card-producto:hover::after {
+    width: 32px;
+    height: 32px;
 }
 
 .card-producto:hover {
@@ -433,6 +475,8 @@ body {
     border-radius: 8px;
     color: #d1d5db;
     padding: 15px;
+    font-size: 20px;
+    margin-top: 22px;
 }
 
 .btn-products a:hover{
@@ -452,6 +496,7 @@ body {
     box-sizing: border-box;
     display: block;
     padding-top: 200px;
+
     
 }
 
@@ -464,13 +509,14 @@ body {
     margin-top: 2px;
     font-weight: 700;
     margin-bottom: 22px;
+    color: #1D1F1E;
 }
 
 .clients-text p{
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 100px;
-    
+    color: #4b5563;
 }
 
 
@@ -541,13 +587,14 @@ body {
     width: auto;
     object-fit: contain;
     display: block;
-    opacity: 0.85;
+    opacity: 0.65;
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .carrusel-group img:hover {
     opacity: 1;
     transform: scale(1.08);
+
 }
 
 /* Animación: traslada exactamente la mitad del ancho total */
@@ -558,4 +605,153 @@ body {
     100% {
         transform: translateX(-50%);
     }
+}
+
+
+.clients-sub{
+    font-size: 40px;
+    font-weight: 700;
+    color: #212322;
+    margin-bottom: 22px;
+    margin-top: 100px;
+    text-align: left;
+}
+
+.sub-text{
+    font-size: 30px;
+    font-weight: 300;
+    color: #4b5563;
+    text-align: left;
+}
+
+.btn-unete{
+    margin-top: 65px;
+    text-align: right;
+}
+
+.btn-unete a{
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #EE751B;
+    text-decoration: none;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    color: #d1d5db;
+    padding: 15px;
+}
+
+.btn-unete a:hover{
+    background-color: transparent;
+    border: 3px solid #EE751B;
+    color: #EE751B;
+    transition: 0.25s;
+}
+
+.packs{
+    background-color: #212322;
+    padding-top: 107px;
+}
+
+.packs h5{
+    font-size: 60px;
+    font-weight: 700;
+    color: #EE751B;
+    text-align: center;   
+    margin-bottom: 0;
+}
+
+.packs-info{
+    font-size: 30px;
+    font-weight: 500;
+    color: #F2F1EF;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.card-pack {
+    position: relative;
+    width: 480px;
+    height: 450px;
+    background-color: #222422;
+    border: 1px solid #373737;
+    padding: 36px 32px;
+    box-sizing: border-box;
+}
+
+/* Variables para controlar las 4 esquinas */
+.card-pack::before,
+.card-pack::after {
+    content: "";
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    height: 32px;              /* Alto del bracket vertical */
+    pointer-events: none;
+    z-index: 2;
+
+    --c-corner: #6b7280;       /* Color gris de las esquinas */
+    --w-corner: 34px;          /* Largo de la barra horizontal */
+    --t-corner: 5px;           /* Grosor de la línea */
+}
+
+/* Esquinas Superiores (Izquierda y Derecha) */
+.card-pack::before {
+    top: -4px;
+    background: 
+        /* Sup. Izquierda: barra horizontal */
+        linear-gradient(var(--c-corner), var(--c-corner)) top left / var(--w-corner) var(--t-corner) no-repeat,
+        /* Sup. Izquierda: barra vertical */
+        linear-gradient(var(--c-corner), var(--c-corner)) top left / var(--t-corner) 100% no-repeat,
+        /* Sup. Derecha: barra horizontal */
+        linear-gradient(var(--c-corner), var(--c-corner)) top right / var(--w-corner) var(--t-corner) no-repeat,
+        /* Sup. Derecha: barra vertical */
+        linear-gradient(var(--c-corner), var(--c-corner)) top right / var(--t-corner) 100% no-repeat;
+}
+
+/* Esquinas Inferiores (Izquierda y Derecha) */
+.card-pack::after {
+    bottom: -4px;
+    background: 
+        /* Inf. Izquierda: barra horizontal */
+        linear-gradient(var(--c-corner), var(--c-corner)) bottom left / var(--w-corner) var(--t-corner) no-repeat,
+        /* Inf. Izquierda: barra vertical */
+        linear-gradient(var(--c-corner), var(--c-corner)) bottom left / var(--t-corner) 100% no-repeat,
+        /* Inf. Derecha: barra horizontal */
+        linear-gradient(var(--c-corner), var(--c-corner)) bottom right / var(--w-corner) var(--t-corner) no-repeat,
+        /* Inf. Derecha: barra vertical */
+        linear-gradient(var(--c-corner), var(--c-corner)) bottom right / var(--t-corner) 100% no-repeat;
+}
+
+.id-elements{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Empuja el cuadrado a la izquierda y START a la derecha */
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.pack-id{
+   color: #D0D0D0;
+   font-size: 30px; 
+   font-weight: 700;
+   border: 1px solid transparent;
+   border-radius: 8px;
+   background-color: #3D3F3D;
+   padding: 15px 45px;
+}
+
+.id-elements img{
+    width: 50px;
+}
+
+.pack-name{
+    color: #F2F1EF;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.pack-info{
+    color: #D0D0D0;
+    font-size: 20px;
+    font: 500;
 }
