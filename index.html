@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TuComidaQR</title>
-    <link rel="icon" href="imagenes\logoRecurso 1.webp">
+    <link rel="icon" href="imagenes/logoRecurso 1.webp">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,16 +15,22 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="nav-lado nav-izq">
+            <div class="nav-lado nav-izq" id="menu-izq">
                 <a href="#inicio">INICIO</a>
                 <a href="#servicios">SERVICIOS</a>
                 <a href="#clientes">CLIENTES</a>
             </div>
 
             <div class="logo-container">
-                <img src="imagenes\logoRecurso 1.webp" alt="Logo Tucomidaqr" class="logo">
+                <img src="imagenes/logoRecurso 1.webp" alt="Logo Tucomidaqr" class="logo">
             </div>
-            <div class="nav-lado nav-der">
+
+            <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"
+                aria-controls="menu-izq menu-der">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-lado nav-der" id="menu-der">
                 <a href="#precios">PRECIOS</a>
                 <a href="">CONTACTO</a>
                 <a href="#nosotros">NOSOTROS</a>
@@ -34,7 +40,7 @@
 
     </header>
     <section class="hero" id="inicio">
-        <img src="imagenes\pexels-fernando-b-m-3624021-30924602.jpg" class="hero-bg" alt="fondo-1">
+        <img src="imagenes/pexels-fernando-b-m-3624021-30924602.jpg" class="hero-bg" alt="fondo-1">
 
         <div class="hero-texto">
             <h1>Transforma tu restaurante <br> con <span class="marca">TU COMIDA QR</span></h1>
@@ -74,13 +80,13 @@
                         adaptadas a su realidad económica y operativa.</p>
                 </div>
                 <div class="img-mision">
-                    <img src="imagenes\mision.png" alt="img-mision">
+                    <img src="imagenes/mision.png" alt="img-mision">
                 </div>
             </div>
 
             <div class="vision">
                 <div class="img-vision">
-                    <img src="imagenes\vision.png" alt="img-vision">
+                    <img src="imagenes/vision.png" alt="img-vision">
                 </div>
 
                 <div class="text-vision">
@@ -109,7 +115,7 @@
             Integramos software, hardware y herramientas visuales para agilizar tu <br> servicio y aumentar tus ventas.
         </p>
         <div class="img-productos">
-            <div class="card-producto"> <img src="imagenes\img 1.jpg" alt="img1">
+            <div class="card-producto"> <img src="imagenes/img 1.jpg" alt="img1">
                 <div class="info-producto">
                     <div class="texto-normal">
                         <p class="product">Soluciones Digitales y Operativas</p>
@@ -119,7 +125,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card-producto"><img src="imagenes\img 2.jpg" alt="img2">
+            <div class="card-producto"><img src="imagenes/img 2.jpg" alt="img2">
                 <div class="info-producto">
 
                     <p class="product">Infraestructura y Equipamiento</p>
@@ -127,7 +133,7 @@
                     </p>
                 </div>
             </div>
-            <div class="card-producto"><img src="imagenes\img 3.jpg" alt="img3">
+            <div class="card-producto"><img src="imagenes/img 3.jpg" alt="img3">
                 <div class="info-producto">
                     <p class="product">Soporte y Mantenimiento Continuo</p>
                     <p class="p-info">Servicios para asegurar que la operación nunca se detenga y la carta se mantenga
@@ -136,7 +142,7 @@
                     </p>
                 </div>
             </div>
-            <div class="card-producto"><img src="imagenes\img 4.jpg" alt="img4">
+            <div class="card-producto"><img src="imagenes/img 4.jpg" alt="img4">
                 <div class="info-producto">
                     <p class="product">Servicios Creativos y Adicionales</p>
                     <p class="p-info">Complementos opcionales para potenciar la imagen comercial.
@@ -165,27 +171,27 @@
                 <!-- Grupo 1 de logos -->
                 <div class="carrusel-group">
                     <img src="imagenes/B&W/webp/bakeryboom.webp" alt="Bakery Boom">
-                    <img src="imagenes\B&W\webp\elmicho.webp" alt="elmicho">
-                    <img src="imagenes\B&W\webp\elmolca.webp" alt="elmolca">
-                    <img src="imagenes\B&W\webp\heladas.webp" alt="heladas">
-                    <img src="imagenes\B&W\webp\lapipizzas.webp" alt="lapipizzas">
-                    <img src="imagenes\B&W\webp\lataquiza.webp" alt="lataquiza">
-                    <img src="imagenes\B&W\webp\pollolavuelta.webp" alt="pollo">
-                    <img src="imagenes\B&W\webp\tadashi.webp" alt="tadashi">
-                    <img src="imagenes\B&W\webp\yamelito.webp" alt="yamelito">
+                    <img src="imagenes/B&W/webp/elmicho.webp" alt="elmicho">
+                    <img src="imagenes/B&W/webp/elmolca.webp" alt="elmolca">
+                    <img src="imagenes/B&W/webp/heladas.webp" alt="heladas">
+                    <img src="imagenes/B&W/webp/lapipizzas.webp" alt="lapipizzas">
+                    <img src="imagenes/B&W/webp/lataquiza.webp" alt="lataquiza">
+                    <img src="imagenes/B&W/webp/pollolavuelta.webp" alt="pollo">
+                    <img src="imagenes/B&W/webp/tadashi.webp" alt="tadashi">
+                    <img src="imagenes/B&W/webp/yamelito.webp" alt="yamelito">
                 </div>
 
                 <!-- Grupo 2 (Copia exacta para el bucle infinito) -->
                 <div class="carrusel-group" aria-hidden="true">
                     <img src="imagenes/B&W/webp/bakeryboom.webp" alt="Bakery Boom">
-                    <img src="imagenes\B&W\webp\elmicho.webp" alt="elmicho">
-                    <img src="imagenes\B&W\webp\elmolca.webp" alt="elmolca">
-                    <img src="imagenes\B&W\webp\heladas.webp" alt="heladas">
-                    <img src="imagenes\B&W\webp\lapipizzas.webp" alt="lapipizzas">
-                    <img src="imagenes\B&W\webp\lataquiza.webp" alt="lataquiza">
-                    <img src="imagenes\B&W\webp\pollolavuelta.webp" alt="pollo">
-                    <img src="imagenes\B&W\webp\tadashi.webp" alt="tadashi">
-                    <img src="imagenes\B&W\webp\yamelito.webp" alt="yamelito">
+                    <img src="imagenes/B&W/webp/elmicho.webp" alt="elmicho">
+                    <img src="imagenes/B&W/webp/elmolca.webp" alt="elmolca">
+                    <img src="imagenes/B&W/webp/heladas.webp" alt="heladas">
+                    <img src="imagenes/B&W/webp/lapipizzas.webp" alt="lapipizzas">
+                    <img src="imagenes/B&W/webp/lataquiza.webp" alt="lataquiza">
+                    <img src="imagenes/B&W/webp/pollolavuelta.webp" alt="pollo">
+                    <img src="imagenes/B&W/webp/tadashi.webp" alt="tadashi">
+                    <img src="imagenes/B&W/webp/yamelito.webp" alt="yamelito">
                 </div>
             </div>
         </div>

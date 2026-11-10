@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* evita que el menú fijo tape los títulos al navegar */
 }
 
 body {
@@ -74,7 +75,7 @@ body {
     justify-content: flex-end;
 }
 
-.logo-continer {
+.logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,12 +113,11 @@ body {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    padding-top: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 60px 20px;
+    padding: 110px 20px 60px;
 }
 
 .hero-bg {
@@ -229,7 +229,7 @@ body {
     background-color: #1D1F1E;
     width: 100%;
     min-height: 640px;
-    padding: 155px 108px;
+    padding: clamp(60px, 10vw, 155px) clamp(20px, 7.5vw, 108px);
     max-width: 100%;
     box-sizing: border-box;
     display: block;
@@ -238,12 +238,12 @@ body {
 .mision-vision {
     color: #F2F1EF;
     width: 100%;
-    padding: 155px 108px;
+    padding: clamp(60px, 10vw, 155px) clamp(20px, 7.5vw, 108px);
     box-sizing: border-box;
 }
 
 .about-box h2 {
-    font-size: clamp(38px, 3.5vw, 50px);
+    font-size: clamp(28px, 4vw, 50px);
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 50px;
@@ -252,7 +252,7 @@ body {
 }
 
 .about-box p {
-    font-size: clamp(38px, 2vw, 40px);
+    font-size: clamp(18px, 3vw, 38px);
     font-weight: 500;
     line-height: 1.55;
     color: #d1d5db;
@@ -263,14 +263,14 @@ body {
 }
 
 .mision-vision p {
-    font-size: 40px;
+    font-size: clamp(18px, 3vw, 40px);
     font-weight: 500;
     line-height: 1.6;
     color: #d1d5db;
 }
 
 .mision-vision .frase {
-    font-size: 55px;
+    font-size: clamp(26px, 4.2vw, 55px);
     font-weight: 700;
     color: #EE751B;
     margin-top: 0;
@@ -341,20 +341,20 @@ body {
     background-color: #d1d5db;
     width: 100%;
     margin: 0;
-    padding: 100px 100px;
+    padding: clamp(60px, 7vw, 100px) clamp(20px, 7vw, 100px);
     color: #212322;
     padding-bottom: 0;
 }
 
 .productos-title {
-    font-size: 60px;
+    font-size: clamp(32px, 4.2vw, 60px);
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 70px;
 }
 
 .productos-sub {
-    font-size: 30px;
+    font-size: clamp(18px, 2.1vw, 30px);
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 70px;
@@ -364,7 +364,7 @@ body {
 .img-productos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 95px;
+    gap: clamp(24px, 6.6vw, 95px);
     width: 100%;
     max-width: 1705px;
     margin: 0 auto;
@@ -501,11 +501,11 @@ body {
     background-color: #d1d5db;
     width: 100%;
     min-height: 640px;
-    padding: 107px 108px;
+    padding: clamp(60px, 7vw, 107px) clamp(20px, 7.5vw, 108px);
     max-width: 100%;
     box-sizing: border-box;
     display: block;
-    padding-top: 200px;
+    padding-top: clamp(120px, 14vw, 200px);
 
 
 }
@@ -515,7 +515,7 @@ body {
 }
 
 .clients-title {
-    font-size: 60px;
+    font-size: clamp(32px, 4.2vw, 60px);
     margin-top: 2px;
     font-weight: 700;
     margin-bottom: 22px;
@@ -523,7 +523,7 @@ body {
 }
 
 .clients-text p {
-    font-size: 30px;
+    font-size: clamp(18px, 2.1vw, 30px);
     font-weight: 300;
     margin-bottom: 100px;
     color: #4b5563;
@@ -622,7 +622,7 @@ body {
 
 
 .clients-sub {
-    font-size: 40px;
+    font-size: clamp(26px, 2.8vw, 40px);
     font-weight: 700;
     color: #212322;
     margin-bottom: 22px;
@@ -631,7 +631,7 @@ body {
 }
 
 .sub-text {
-    font-size: 30px;
+    font-size: clamp(18px, 2.1vw, 30px);
     font-weight: 300;
     color: #4b5563;
     text-align: left;
@@ -666,11 +666,12 @@ body {
 
 .packs {
     background-color: #212322;
-    padding: 107px 0;
+    padding: clamp(60px, 7vw, 107px) 0;
 }
 
 .packs h5 {
-    font-size: 60px;
+    font-size: clamp(32px, 4.2vw, 60px);
+    padding: 0 20px;
     font-weight: 700;
     color: #EE751B;
     text-align: center;
@@ -679,7 +680,8 @@ body {
 
 
 .packs-info {
-    font-size: 30px;
+    font-size: clamp(18px, 2.1vw, 30px);
+    padding: 0 20px;
     font-weight: 500;
     color: #F2F1EF;
     text-align: center;
@@ -819,7 +821,7 @@ body {
 }
 
 .info-price {
-    font-size: 60px;
+    font-size: clamp(44px, 4.2vw, 60px);
     font-weight: 700;
     margin: 20px 0;
 }
@@ -935,4 +937,201 @@ display: inline-block;
 background-color: transparent;
     color: #EE751B;
     transform: translateY(-3px);
+}
+
+/* =====================================================
+   BOTÓN HAMBURGUESA (oculto en escritorio)
+   ===================================================== */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #F2F1EF;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar.is-open .nav-toggle span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.navbar.is-open .nav-toggle span:nth-child(2) { opacity: 0; }
+.navbar.is-open .nav-toggle span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+/* ---------- Laptops pequeñas / tablets horizontales ---------- */
+@media (max-width: 1200px) {
+    .img-productos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .card-producto {
+        aspect-ratio: 4 / 3;
+        min-height: 320px;
+    }
+}
+
+/* ---------- Tablets: menú hamburguesa y secciones en columna ---------- */
+@media (max-width: 992px) {
+
+    /* Menú */
+    .navbar {
+        flex-wrap: wrap;
+        min-height: 70px;
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .logo-container { order: 1; }
+    .logo { max-height: 50px; margin: 0; }
+
+    .nav-toggle {
+        display: flex;
+        order: 2;
+        margin-left: auto;
+    }
+
+    .nav-lado {
+        display: none;
+        flex: 0 0 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 4px;
+    }
+
+    .nav-izq { order: 3; padding-top: 10px; }
+    .nav-der { order: 4; padding-bottom: 10px; }
+
+    .navbar.is-open .nav-lado { display: flex; }
+
+    .nav-lado a {
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    /* Los saltos de línea manuales estorban en pantallas angostas */
+    .mision-vision br,
+    .productos-sub br { display: none; }
+
+    /* Nosotros */
+    .about-box { min-height: auto; }
+
+    .mision,
+    .vision {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .vision { flex-direction: column-reverse; margin-bottom: 0; }
+
+    .text-mision,
+    .text-vision {
+        flex: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    .img-mision,
+    .img-vision {
+        flex: none;
+        width: 100%;
+        max-width: 420px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    /* Clientes */
+    .clients { min-height: auto; }
+    .clients-text p { margin-bottom: 50px; }
+    .clients-carrusel { height: 220px; }
+    .carrusel-group { gap: 40px; padding-right: 40px; }
+    .carrusel-group img { height: 110px; }
+    .clients-sub { margin-top: 60px; }
+
+    /* Paquetes: botón "a tu medida" apilado */
+    .pack-medida {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ---------- Celulares ---------- */
+@media (max-width: 600px) {
+    .home-progressive-blur { height: 70px; }
+
+    .hero-texto h1 br { display: none; }
+
+    .botones { flex-direction: column; gap: 14px; }
+    .botones a { width: 100%; }
+
+    .productos-title { margin-bottom: 30px; }
+    .productos-sub { margin-bottom: 40px; }
+
+    .img-productos {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .card-producto {
+        aspect-ratio: auto;
+        min-height: 360px;
+    }
+
+    .info-producto .product { font-size: 22px; }
+    .info-producto p { font-size: 17px; }
+
+    .btn-products,
+    .btn-unete {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .btn-products { padding-bottom: 60px; }
+
+    .clients-carrusel { height: 170px; }
+    .carrusel-group { gap: 30px; padding-right: 30px; }
+    .carrusel-group img { height: 80px; }
+    .clients-carrusel::before,
+    .clients-carrusel::after { width: 40px; }
+
+    /* Tarjetas de paquetes */
+    .packs-container { padding: 0 16px; gap: 24px; }
+
+    .card-pack {
+        padding: 28px 20px;
+        min-height: 0;
+    }
+
+    .pack-id { font-size: 24px; padding: 12px 32px; }
+    .pack-name { font-size: 24px; }
+    .pack-info { font-size: 18px; }
+    .price-moneda { font-size: 22px; }
+    .features-list li { font-size: 16px; align-items: flex-start; }
+    .features-list li::before { margin-top: 5px; }
+    .pack-more { font-size: 18px; }
+
+    /* Más alto permitido: en pantallas angostas el texto ocupa más líneas */
+    .card-pack.is-expanded .pack-features { max-height: 900px; }
+
+    .pack-medida a { font-size: 18px; }
+}
+
+/* ---------- Accesibilidad: respeta a quien desactiva animaciones ---------- */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .carrusel-track { animation: none; }
 }

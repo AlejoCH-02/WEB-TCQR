@@ -23,3 +23,22 @@ buttons.forEach((button) => {
         }
     });
 });
+
+// ---------- Menú hamburguesa (celular y tablet) ----------
+const navbar = document.querySelector('.navbar');
+const navToggle = document.querySelector('.nav-toggle');
+
+function setMenu(open) {
+    navbar.classList.toggle('is-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+}
+
+navToggle.addEventListener('click', () => {
+    setMenu(!navbar.classList.contains('is-open'));
+});
+
+// Cierra el menú al elegir una opción
+document.querySelectorAll('.nav-lado a').forEach((link) => {
+    link.addEventListener('click', () => setMenu(false));
+});
