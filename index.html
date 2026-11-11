@@ -15,27 +15,27 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="nav-lado nav-izq" id="menu-izq">
-                <a href="#inicio">INICIO</a>
-                <a href="#servicios">SERVICIOS</a>
-                <a href="#clientes">CLIENTES</a>
-            </div>
-
             <div class="logo-container">
                 <img src="imagenes/logoRecurso 1.webp" alt="Logo Tucomidaqr" class="logo">
             </div>
 
             <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"
-                aria-controls="menu-izq menu-der">
+                aria-controls="menu-lateral">
                 <span></span><span></span><span></span>
             </button>
 
-            <div class="nav-lado nav-der" id="menu-der">
-                <a href="#precios">PRECIOS</a>
-                <a href="">CONTACTO</a>
-                <a href="#nosotros">NOSOTROS</a>
+            <div class="nav-menu" id="menu-lateral">
+                <div class="nav-lado nav-izq">
+                    <a href="#inicio">INICIO</a>
+                    <a href="#servicios">SERVICIOS</a>
+                    <a href="#clientes">CLIENTES</a>
+                </div>
+                <div class="nav-lado nav-der">
+                    <a href="#precios">PRECIOS</a>
+                    <a href="">CONTACTO</a>
+                    <a href="#nosotros">NOSOTROS</a>
+                </div>
             </div>
-
         </nav>
 
     </header>
@@ -124,11 +124,11 @@
                         <p class="p-info">Servicios esenciales para la digitalización de la carta y el flujo de comandas
                             diario.
                         </p>
-                                <!-- Lista que se desplegará al hacer hover -->
-        <ul class="product-features">
-            <li>Actualización en tiempo real</li>
-            <li>Categorías y fotos en HD</li>
-            <li>Compatible con iOS y Android</li>
+                        <!-- Lista que se desplegará al hacer hover -->
+                        <ul class="product-features">
+                            <li>Actualización en tiempo real</li>
+                            <li>Categorías y fotos en HD</li>
+                            <li>Compatible con iOS y Android</li>
                     </div>
                 </div>
             </div>
@@ -217,115 +217,118 @@
 
         <h5>Crece a tu ritmo, sin sorpresas</h5>
         <p class="packs-info">Elige el paquete ideal para tu negocio, con precios claros y sin letras chiquitas.</p>
-<div class="packs-container">
-        <!--START-->
-        <article class="card-pack" data-plan="start">
-            <div class="top-pack">
-                <div class="id-elements">
-                    <img src="CUADRO-SUPERIOR.webp" alt="cuadro">
-                    <div class="pack-id">START</div>
-                </div>
+        <div class="packs-container">
+            <!--START-->
+            <article class="card-pack" data-plan="start">
+                <div class="top-pack">
+                    <div class="id-elements">
+                        <img src="CUADRO-SUPERIOR.webp" alt="cuadro">
+                        <div class="pack-id">START</div>
+                    </div>
 
-                <div class="pack-name"><span class="tuco">TuComidaQR</span> Start</div>
-                <div class="pack-info">
-                    Digitaliza tu menú y contrólalo fácilmente desde tu panel administrativo, sin complicaciones ni
-                    errores.
-                    <div class="price">
-                        <p class="info-price">$2,599 <span class="price-moneda">MXN</span></p>
+                    <div class="pack-name"><span class="tuco">TuComidaQR</span> Start</div>
+                    <div class="pack-info">
+                        Digitaliza tu menú y contrólalo fácilmente desde tu panel administrativo, sin complicaciones ni
+                        errores.
+                        <div class="price">
+                            <p class="info-price">$2,599 <span class="price-moneda">MXN</span></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Contenedor que se desplegará al hacer clic -->
-            <div class="pack-features">
-                <ul class="features-list">
-                    <li>Menú Digital Interactivo (hasta 60 productos) – $1,400 MXN</li>
-                    <li>Enlace QR listo para impresión</li>
-                    <li>Panel Administrativo – $1,200 MXN</li>
-                    <li>Primer mes de mantenimiento — Gratuito</li>
-                    <li>Mantenimiento bimestral (opcional): $300 MXN</li>
-                    <li>Pago anual después del primer año: $1,800 MXN</li>
-                </ul>
-            </div>
-            <div class="action-pack">
-                <button class="pack-more" type="button" aria-expanded="false">Ver todas las funcionalidades</button>
-            </div>
-        </article>
-
-        <!--PLUS-->
-
-        <article class="card-pack" data-plan="plus">
-            <div class="top-pack">
-                <div class="id-elements">
-                    <img src="CUADRO-SUPERIOR.webp" alt="cuadro">
-                    <div class="pack-id">PLUS</div>
+                <!-- Contenedor que se desplegará al hacer clic -->
+                <div class="pack-features">
+                    <ul class="features-list">
+                        <li>Menú Digital Interactivo (hasta 60 productos) – $1,400 MXN</li>
+                        <li>Enlace QR listo para impresión</li>
+                        <li>Panel Administrativo – $1,200 MXN</li>
+                        <li>Primer mes de mantenimiento — Gratuito</li>
+                        <li>Mantenimiento bimestral (opcional): $300 MXN</li>
+                        <li>Pago anual después del primer año: $1,800 MXN</li>
+                    </ul>
                 </div>
+                <div class="action-pack">
+                    <button class="pack-more" type="button" aria-expanded="false">Ver todas las funcionalidades</button>
+                </div>
+            </article>
 
-                <div class="pack-name"><span class="tuco">TuComidaQR</span> Plus</div>
-                <div class="pack-info">
-                    Gestión profesional de tu negocio con menú digital, comandas y control total desde una sola plataforma.
-                    <div class="price">
-                        <p class="info-price">$5,099 <span class="price-moneda">MXN</span></p>
+            <!--PLUS-->
+
+            <article class="card-pack" data-plan="plus">
+                <div class="top-pack">
+                    <div class="id-elements">
+                        <img src="CUADRO-SUPERIOR.webp" alt="cuadro">
+                        <div class="pack-id">PLUS</div>
+                    </div>
+
+                    <div class="pack-name"><span class="tuco">TuComidaQR</span> Plus</div>
+                    <div class="pack-info">
+                        Gestión profesional de tu negocio con menú digital, comandas y control total desde una sola
+                        plataforma.
+                        <div class="price">
+                            <p class="info-price">$5,099 <span class="price-moneda">MXN</span></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Contenedor que se desplegará al hacer clic -->
-            <div class="pack-features">
-                <ul class="features-list">
-                    <li>Sistema de Comandas Personalizado – $2,200 MXN</li>
-                    <li>Menú Digital Interactivo (80 productos) – $1,500 MXN</li>
-                    <li>Enlace QR listo para impresión</li>
-                    <li>Panel Administrativo del Menú Digital – $1,400 MXN</li>
-                    <li>Primer mes de mantenimiento — Gratuito</li>
-                    <li>Mantenimiento bimestral (opcional): $300 MXN</li>
-                    <li>Pago anual después del primer año: $3,600 MXN</li>
-                </ul>
-            </div>
-            <div class="action-pack">
-                <button class="pack-more" type="button" aria-expanded="false">Ver todas las funcionalidades</button>
-            </div>
-        </article>
-
-
-        <!--MAX-->
-
-                <article class="card-pack" data-plan="max">
-            <div class="top-pack">
-                <div class="id-elements">
-                    <img src="CUADRO-SUPERIOR.webp" alt="cuadro">
-                    <div class="pack-id">MAX</div>
+                <!-- Contenedor que se desplegará al hacer clic -->
+                <div class="pack-features">
+                    <ul class="features-list">
+                        <li>Sistema de Comandas Personalizado – $2,200 MXN</li>
+                        <li>Menú Digital Interactivo (80 productos) – $1,500 MXN</li>
+                        <li>Enlace QR listo para impresión</li>
+                        <li>Panel Administrativo del Menú Digital – $1,400 MXN</li>
+                        <li>Primer mes de mantenimiento — Gratuito</li>
+                        <li>Mantenimiento bimestral (opcional): $300 MXN</li>
+                        <li>Pago anual después del primer año: $3,600 MXN</li>
+                    </ul>
                 </div>
+                <div class="action-pack">
+                    <button class="pack-more" type="button" aria-expanded="false">Ver todas las funcionalidades</button>
+                </div>
+            </article>
 
-                <div class="pack-name"><span class="tuco">TuComidaQR</span> Max</div>
-                <div class="pack-info">
-                    La experiencia completa TuComidaQR: control total, herramientas avanzadas y una imagen profesional de alto nivel.
-                    <div class="price">
-                        <p class="info-price">$6,599 <span class="price-moneda">MXN</span></p>
+
+            <!--MAX-->
+
+            <article class="card-pack" data-plan="max">
+                <div class="top-pack">
+                    <div class="id-elements">
+                        <img src="CUADRO-SUPERIOR.webp" alt="cuadro">
+                        <div class="pack-id">MAX</div>
+                    </div>
+
+                    <div class="pack-name"><span class="tuco">TuComidaQR</span> Max</div>
+                    <div class="pack-info">
+                        La experiencia completa TuComidaQR: control total, herramientas avanzadas y una imagen
+                        profesional de alto nivel.
+                        <div class="price">
+                            <p class="info-price">$6,599 <span class="price-moneda">MXN</span></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Contenedor que se desplegará al hacer clic -->
-            <div class="pack-features">
-                <ul class="features-list">
-                    <li>Sistema de Comandas Personalizado – $2,600 MXN</li>
-                    <li>Menú Digital Interactivo (120 productos) – $1,500 MXN</li>
-                    <li>Enlace QR listo para impresión</li>
-                    <li>Panel Administrativo del Menú Digital – $1,800 MXN</li>
-                    <li>Sesión de Fotografía (50 fotos) – $700 MXN</li>
-                    <li>3 meses de mantenimiento (sin incluir el mes de contratación) — Gratuito</li>
-                    <li>Mantenimiento bimestral (opcional): $300 MXN</li>
-                    <li>Pago anual después del primer año: $4,800 MXN</li>
-                </ul>
-            </div>
-            <div class="action-pack">
-                <button class="pack-more" type="button" aria-expanded="false">Ver todas las funcionalidades</button>
-            </div>
-        </article>
-</div>
+                <!-- Contenedor que se desplegará al hacer clic -->
+                <div class="pack-features">
+                    <ul class="features-list">
+                        <li>Sistema de Comandas Personalizado – $2,600 MXN</li>
+                        <li>Menú Digital Interactivo (120 productos) – $1,500 MXN</li>
+                        <li>Enlace QR listo para impresión</li>
+                        <li>Panel Administrativo del Menú Digital – $1,800 MXN</li>
+                        <li>Sesión de Fotografía (50 fotos) – $700 MXN</li>
+                        <li>3 meses de mantenimiento (sin incluir el mes de contratación) — Gratuito</li>
+                        <li>Mantenimiento bimestral (opcional): $300 MXN</li>
+                        <li>Pago anual después del primer año: $4,800 MXN</li>
+                    </ul>
+                </div>
+                <div class="action-pack">
+                    <button class="pack-more" type="button" aria-expanded="false">Ver todas las funcionalidades</button>
+                </div>
+            </article>
+        </div>
 
-<div class="pack-medida">
-    <p>¿Te interesa algún paquete o necesitas uno a tu medida? Escríbenos y lo dejamos listo para tu negocio.</p> <a href="">Contactanos</a>
-    
-</div>
+        <div class="pack-medida">
+            <p>¿Te interesa algún paquete o necesitas uno a tu medida? Escríbenos y lo dejamos listo para tu negocio.
+            </p> <a href="">Contactanos</a>
+
+        </div>
     </section>
 
 

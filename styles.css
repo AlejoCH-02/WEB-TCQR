@@ -6,7 +6,8 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* evita que el menú fijo tape los títulos al navegar */
+    scroll-padding-top: 100px;
+    /* evita que el menú fijo tape los títulos al navegar */
 }
 
 body {
@@ -193,7 +194,7 @@ body {
     background-color: #EE751B;
     color: #FFFFFF;
     border: 3px solid #EE751B;
-    
+
 }
 
 .btn-demo:hover {
@@ -207,7 +208,7 @@ body {
     border: 3px solid #F9E03D;
     background-color: #F9E03D;
     color: #212322;
-    
+
 }
 
 .btn-cliente:hover {
@@ -378,10 +379,10 @@ body {
     opacity: 0;
     transform: translateY(12px);
     overflow: hidden;
-    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
-                opacity 0.25s ease, 
-                transform 0.3s ease, 
-                margin 0.3s ease;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.25s ease,
+        transform 0.3s ease,
+        margin 0.3s ease;
 }
 
 /* Elementos de la lista */
@@ -406,7 +407,8 @@ body {
 
 /* Al hacer hover en la tarjeta, la lista se despliega suavemente */
 .card-producto:hover .product-features {
-    max-height: 160px; /* Altura suficiente para contener los ítems */
+    max-height: 160px;
+    /* Altura suficiente para contener los ítems */
     opacity: 1;
     transform: translateY(0);
     margin-top: 12px;
@@ -690,7 +692,7 @@ body {
 .btn-unete {
     margin-top: 65px;
     text-align: right;
-    
+
 }
 
 .btn-unete a {
@@ -704,7 +706,7 @@ body {
     color: #d1d5db;
     padding: 15px;
     transition: 0.5s;
-    
+
 }
 
 .btn-unete a:hover {
@@ -822,6 +824,42 @@ body {
 .card-pack:hover {
     transform: translateY(-10px);
     border-color: #4a4a4a;
+}
+
+/* ---------- Tarjetas de precios como carrusel (992px o menos) ---------- */
+@media (max-width: 992px) {
+    .packs-container {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 24px;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+        /* El espacio arriba/abajo evita que se recorten las esquinas y el efecto hover */
+        padding: 24px 24px 40px;
+        margin-top: 30px;
+    }
+
+    .packs-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card-pack {
+        flex: 0 0 min(80vw, 400px);
+        width: auto;
+        max-width: none;
+        margin: 0;
+        scroll-snap-align: start;
+    }
+
+    /* Sin salto de hover: en táctil provoca parpadeos */
+    .card-pack:hover {
+        transform: none;
+    }
 }
 
 .id-elements {
@@ -948,19 +986,22 @@ body {
     color: #FFFFFF;
 }
 
-.pack-medida{
-display: flex;
-    justify-content: space-between; /* Empuja el texto a la izquierda y el botón a la derecha */
-    align-items: center;             /* Los alinea verticalmente al centro */
+.pack-medida {
+    display: flex;
+    justify-content: space-between;
+    /* Empuja el texto a la izquierda y el botón a la derecha */
+    align-items: center;
+    /* Los alinea verticalmente al centro */
     gap: 24px;
     width: 100%;
-    max-width: 1450px;               /* Ajusta al ancho de tu contenedor de tarjetas */
+    max-width: 1450px;
+    /* Ajusta al ancho de tu contenedor de tarjetas */
     margin: 50px auto 0 auto;
     padding: 0 clamp(20px, 4vw, 40px);
     box-sizing: border-box;
 }
 
-.pack-medida p{
+.pack-medida p {
     color: #DFDFDF;
     font-size: clamp(18px, 1.4vw, 22px);
     font-weight: 400;
@@ -968,9 +1009,10 @@ display: flex;
     line-height: 1.4;
 }
 
-.pack-medida a{
-display: inline-block;
-    white-space: nowrap;             /* Evita que la palabra se parta en dos líneas */
+.pack-medida a {
+    display: inline-block;
+    white-space: nowrap;
+    /* Evita que la palabra se parta en dos líneas */
     background-color: #EE751B;
     color: #FFFFFF;
     text-decoration: none;
@@ -980,13 +1022,30 @@ display: inline-block;
     border-radius: 8px;
     border: 2px solid #EE751B;
     transition: 0.5s;
-    
+
 }
 
-.pack-medida a:hover{
-background-color: transparent;
+.pack-medida a:hover {
+    background-color: transparent;
     color: #EE751B;
     transform: translateY(-3px);
+}
+
+/* Escritorio: el contenedor "desaparece" y todo se ordena como antes */
+.nav-menu {
+    display: contents;
+}
+
+.nav-izq {
+    order: 1;
+}
+
+.logo-container {
+    order: 2;
+}
+
+.nav-der {
+    order: 3;
 }
 
 /* =====================================================
@@ -1011,9 +1070,17 @@ background-color: transparent;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.navbar.is-open .nav-toggle span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-.navbar.is-open .nav-toggle span:nth-child(2) { opacity: 0; }
-.navbar.is-open .nav-toggle span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+.navbar.is-open .nav-toggle span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.navbar.is-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar.is-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
 
 /* =====================================================
    RESPONSIVE
@@ -1035,49 +1102,79 @@ background-color: transparent;
 /* ---------- Tablets: menú hamburguesa y secciones en columna ---------- */
 @media (max-width: 992px) {
 
-    /* Menú */
+    /* Menú lateral derecho */
     .navbar {
-        flex-wrap: wrap;
         min-height: 70px;
-        max-height: 100vh;
-        overflow-y: auto;
     }
 
-    .logo-container { order: 1; }
-    .logo { max-height: 50px; margin: 0; }
+    .logo-container {
+        order: 1;
+    }
+
+    .logo {
+        max-height: 50px;
+        margin: 0;
+    }
 
     .nav-toggle {
         display: flex;
         order: 2;
         margin-left: auto;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(300px, 80vw);
+        height: 100vh;
+        height: 100dvh;
+        padding: 90px 20px 30px;
+        background-color: #212322;
+        box-shadow: -8px 0 30px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+        z-index: 1001;
+
+        /* Escondido fuera de la pantalla, a la derecha */
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: transform 0.3s ease, visibility 0.3s;
+    }
+
+    .navbar.is-open .nav-menu {
+        transform: translateX(0);
+        visibility: visible;
     }
 
     .nav-lado {
-        display: none;
-        flex: 0 0 100%;
+        flex: none;
         flex-direction: column;
         justify-content: flex-start;
         gap: 4px;
     }
 
-    .nav-izq { order: 3; padding-top: 10px; }
-    .nav-der { order: 4; padding-bottom: 10px; }
-
-    .navbar.is-open .nav-lado { display: flex; }
-
     .nav-lado a {
         display: block;
-        text-align: center;
+        text-align: left;
         font-size: 18px;
-        padding: 12px;
+        padding: 14px 12px;
     }
 
     /* Los saltos de línea manuales estorban en pantallas angostas */
     .mision-vision br,
-    .productos-sub br { display: none; }
+    .productos-sub br {
+        display: none;
+    }
 
     /* Nosotros */
-    .about-box { min-height: auto; }
+    .about-box {
+        min-height: auto;
+    }
 
     .mision,
     .vision {
@@ -1086,7 +1183,10 @@ background-color: transparent;
         margin-bottom: 50px;
     }
 
-    .vision { flex-direction: column-reverse; margin-bottom: 0; }
+    .vision {
+        flex-direction: column-reverse;
+        margin-bottom: 0;
+    }
 
     .text-mision,
     .text-vision {
@@ -1105,12 +1205,30 @@ background-color: transparent;
     }
 
     /* Clientes */
-    .clients { min-height: auto; }
-    .clients-text p { margin-bottom: 50px; }
-    .clients-carrusel { height: 220px; }
-    .carrusel-group { gap: 40px; padding-right: 40px; }
-    .carrusel-group img { height: 110px; }
-    .clients-sub { margin-top: 60px; }
+    .clients {
+        min-height: auto;
+    }
+
+    .clients-text p {
+        margin-bottom: 50px;
+    }
+
+    .clients-carrusel {
+        height: 220px;
+    }
+
+    .carrusel-group {
+        gap: 40px;
+        padding-right: 40px;
+    }
+
+    .carrusel-group img {
+        height: 110px;
+    }
+
+    .clients-sub {
+        margin-top: 60px;
+    }
 
     /* Paquetes: botón "a tu medida" apilado */
     .pack-medida {
@@ -1121,15 +1239,30 @@ background-color: transparent;
 
 /* ---------- Celulares ---------- */
 @media (max-width: 600px) {
-    .home-progressive-blur { height: 70px; }
+    .home-progressive-blur {
+        height: 70px;
+    }
 
-    .hero-texto h1 br { display: none; }
+    .hero-texto h1 br {
+        display: none;
+    }
 
-    .botones { flex-direction: column; gap: 14px; }
-    .botones a { width: 100%; }
+    .botones {
+        flex-direction: column;
+        gap: 14px;
+    }
 
-    .productos-title { margin-bottom: 30px; }
-    .productos-sub { margin-bottom: 40px; }
+    .botones a {
+        width: 100%;
+    }
+
+    .productos-title {
+        margin-bottom: 30px;
+    }
+
+    .productos-sub {
+        margin-bottom: 40px;
+    }
 
     .img-productos {
         grid-template-columns: 1fr;
@@ -1141,8 +1274,13 @@ background-color: transparent;
         min-height: 360px;
     }
 
-    .info-producto .product { font-size: 22px; }
-    .info-producto p { font-size: 17px; }
+    .info-producto .product {
+        font-size: 22px;
+    }
+
+    .info-producto p {
+        font-size: 17px;
+    }
 
     .btn-products,
     .btn-unete {
@@ -1150,38 +1288,87 @@ background-color: transparent;
         text-align: center;
     }
 
-    .btn-products { padding-bottom: 60px; }
+    .btn-products {
+        padding-bottom: 60px;
+    }
 
-    .clients-carrusel { height: 170px; }
-    .carrusel-group { gap: 30px; padding-right: 30px; }
-    .carrusel-group img { height: 80px; }
+    .clients-carrusel {
+        height: 170px;
+    }
+
+    .carrusel-group {
+        gap: 30px;
+        padding-right: 30px;
+    }
+
+    .carrusel-group img {
+        height: 80px;
+    }
+
     .clients-carrusel::before,
-    .clients-carrusel::after { width: 40px; }
+    .clients-carrusel::after {
+        width: 40px;
+    }
 
     /* Tarjetas de paquetes */
-    .packs-container { padding: 0 16px; gap: 24px; }
+    .packs-container {
+        padding: 24px 16px 40px;
+        scroll-padding-inline: 16px;
+        gap: 16px;
+    }
 
     .card-pack {
         padding: 28px 20px;
         min-height: 0;
     }
 
-    .pack-id { font-size: 24px; padding: 12px 32px; }
-    .pack-name { font-size: 24px; }
-    .pack-info { font-size: 18px; }
-    .price-moneda { font-size: 22px; }
-    .features-list li { font-size: 16px; align-items: flex-start; }
-    .features-list li::before { margin-top: 5px; }
-    .pack-more { font-size: 18px; }
+    .pack-id {
+        font-size: 24px;
+        padding: 12px 32px;
+    }
+
+    .pack-name {
+        font-size: 24px;
+    }
+
+    .pack-info {
+        font-size: 18px;
+    }
+
+    .price-moneda {
+        font-size: 22px;
+    }
+
+    .features-list li {
+        font-size: 16px;
+        align-items: flex-start;
+    }
+
+    .features-list li::before {
+        margin-top: 5px;
+    }
+
+    .pack-more {
+        font-size: 18px;
+    }
 
     /* Más alto permitido: en pantallas angostas el texto ocupa más líneas */
-    .card-pack.is-expanded .pack-features { max-height: 900px; }
+    .card-pack.is-expanded .pack-features {
+        max-height: 900px;
+    }
 
-    .pack-medida a { font-size: 18px; }
+    .pack-medida a {
+        font-size: 18px;
+    }
 }
 
 /* ---------- Accesibilidad: respeta a quien desactiva animaciones ---------- */
 @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .carrusel-track { animation: none; }
+    html {
+        scroll-behavior: auto;
+    }
+
+    .carrusel-track {
+        animation: none;
+    }
 }
